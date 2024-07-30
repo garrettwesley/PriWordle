@@ -1,22 +1,10 @@
 const tileDisplay = document.querySelector('.tile-container');
 const keyBoard = document.querySelector('.key-container');
 const messageDisplay = document.querySelector('.message-container');
-let wordle
+const wordle = "GRASS"
 let currentRow = 0
 let currentTile = 0
 let isGameOver = false
-
-const getWordle = () => {
-    fetch(`http://localhost:8000/word`)
-        .then(response => response.json())
-        .then(json => {
-            console.log(json)
-            wordle = json.toUpperCase()
-        })
-        .catch(err => console.log(err))
-}
-
-getWordle()
 
 const keys = [
     'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'ENTER', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '<<'
@@ -100,11 +88,6 @@ const checkRow = () => {
     console.log('guess ', guess)
     if (currentTile > 4) {
         // showMessage(`Loading...`)
-
-        fetch(`http://localhost:8000/check/?currword=${guess}`)
-            .then(response => response.json())
-            .then(json => {
-                console.log(json)
                 if (guess == wordle) {
                     flipTile()
                     showMessage('Magnificent!')
@@ -112,13 +95,7 @@ const checkRow = () => {
                     return
 
                 }
-                else if (!json) {
-                    showMessage(`Word doesn't exist`)
-                    return
-                }
                 else {
-
-                    console.log('guess is ' + guess, 'wordle is ' + wordle)
                     flipTile()
                     if (wordle == guess) {
                         showMessage('Magnificent!')
@@ -138,7 +115,6 @@ const checkRow = () => {
                     }
 
                 }
-            }).catch(err => console.log(err))
 
     }
 }
