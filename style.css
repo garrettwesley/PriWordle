@@ -7,14 +7,7 @@ body {
     background-color: #121213;
 }
 
-.game-container{
-    height: 90vh;
-    width: 100%
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
+
 
 .title-container{
     text-align: center;
@@ -109,23 +102,46 @@ body {
 }
 
 .key-container button {
-    width: 7.6vw;
-    min-width: 20px;
-    max-width: 43px;
+    width: calc(10% - 8px);
     height: 58px;
     border-radius: 4px;
     border: none;
     background-color: #818384;
-    margin: 0.5vw;
+    margin: 4px;
     font-size: 1rem;
 }
 
-.key-container button:nth-child(11) {
-    margin-left: 4vw;
+/* First row: 10 keys */
+.key-container button:nth-child(-n+10) {
+    flex-basis: calc(10% - 8px);
 }
 
+/* Second row: 9 keys, centered */
+.key-container button:nth-child(n+11):nth-child(-n+19) {
+    flex-basis: calc(11.11% - 8px);
+}
+
+/* Third row: 7 keys */
+.key-container button:nth-child(n+20) {
+    flex-basis: calc(14.28% - 8px);
+}
+
+/* Wider keys for Enter and Backspace */
 .key-container button:nth-child(20),
 .key-container button:nth-child(28) {
-    width: 12vw;
-    max-width: 68px;
+    flex-basis: calc(15% - 8px);
+}
+
+@media (max-width: 500px) {
+    .key-container button {
+        height: 50px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .key-container button {
+        height: 40px;
+        font-size: 0.8rem;
+    }
 }
