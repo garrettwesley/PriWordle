@@ -90,7 +90,7 @@ const checkRow = () => {
         // showMessage(`Loading...`)
                 if (guess == wordle) {
                     flipTile()
-                    showMessage('Magnificent!')
+                    showMessage('Come meet Finn and I at the Presidio grass!')
                     isGameOver = true
                     return
 
@@ -98,7 +98,7 @@ const checkRow = () => {
                 else {
                     flipTile()
                     if (wordle == guess) {
-                        showMessage('Magnificent!')
+                        showMessage('Come meet Finn and I at the Presidio grass!')
                         isGameOver = true
                         return
                     } else {
