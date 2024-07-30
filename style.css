@@ -1,134 +1,113 @@
 * {
-  color: #ffffff;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
+    color: #ffffff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body {
-  background-color: #121213;
+    background-color: #121213;
 }
 
-.game-container {
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px; /* Add some padding for better spacing on mobile */
+.game-container{
+    height : 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.title-container {
-  text-align: center;
-  width: 100%; /* Take up full width on mobile */
-  max-width: 510px; /* Limit width on larger screens */
-  border-bottom: solid 1px #3a3a3c;
-  margin-bottom: 20px;
+.title-container{
+    text-align: center;
+    width: 510px;
+    border-bottom: solid 1px #3a3a3c;
 }
 
-.tile-container {
-  width: 100%;
-  max-width: 330px;
-  margin-bottom: 20px;
+.tile-container{
+    width: 330px;
+    margin-bottom: 30px;
 }
 
-.key-container {
-  width: 100%;
-  max-width: 510px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Center the keys */
+.key-container{
+    width: 510px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.key-container button {
-  width: 6%; /* Use percentage for better responsiveness */
-  min-width: 30px; /* Set a minimum width */
-  height: 50px; 
-  border-radius: 4px;
-  border: none;
-  background-color: #818384;
-  margin: 3px;
-  font-size: 14px; /* Adjust font size for smaller screens */
+.key-container button{
+    width: 43px;
+    height : 58px;
+    border-radius: 4px;
+    border: none;
+    background-color: #818384;
+    margin: 4px;
 }
 
-/* Adjust spacing for specific keys on smaller screens */
-@media (max-width: 500px) {
-  .key-container button:nth-child(11) {
-    margin-left: 15px; 
-  }
+.key-container button:nth-child(11){
+    margin-left: 30px;
 }
 
 .key-container button:nth-child(20),
 .key-container button:nth-child(28) {
-  width: 15%; /* Use percentage for better responsiveness */
-  min-width: 60px;
+    width: 68px;
 }
 
-.tile-container div {
-  display: flex;
-  justify-content: center;
+.tile-container div{
+    display: flex;
+    justify-content: center;
 }
 
-.tile-container .tile {
-  width: 10%; /* Use percentage for better responsiveness */
-  min-width: 30px;
-  height: 10%;
-  min-height: 30px;
-  border: 2px solid #3a3a3c;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2px;
-  font-size: 20px; /* Adjust font size for smaller screens */
+.tile-container .tile{
+    width: 50px;
+    height: 50px;
+    border: 2px solid #3a3a3c;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
 }
 
-.message-container {
-  height: 30px;
-  width: 100%;
-  max-width: 510px;
-  text-align: center;
+.message-container{
+    height: 30px;
 }
 
-p {
-  background-color: #818384;
-  border-radius: 10px;
-  padding: 5px; /* Reduce padding on mobile */
-  margin: 0;
-  font-size: 12px; /* Adjust font size for smaller screens */
+ p{
+    background-color: #818384;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0;
 }
 
-.tile.flip {
-  animation: 0.5s linear flipping;
+.tile.flip{
+    animation: 0.5s linear flipping;
 }
 
 @keyframes flipping {
-  0% {
-    transform: rotateX(0deg);
-  }
-  25% {
-    transform: rotateX(90deg);
-  }
-  50% {
-    transform: rotateX(180deg);
-  }
-  75% {
-    transform: rotateX(270deg);
-  }
-  100% {
-    transform: rotateX(360deg);
-  }
+    0%{
+        transform: rotateX(0deg);
+    }
+    25%{
+        transform: rotateX(90deg);
+    }
+    50%{
+        transform: rotateX(180deg);
+    }
+    75%{
+        transform: rotateX(270deg);
+    }
+    100%{
+        transform: rotateX(360deg);
+    }
 }
 
-.grey {
-  background-color: #3a3a3c !important;
-  border: none !important;
+.grey{
+    background-color: #3a3a3c !important;
+    border: none !important;
 }
-
-.yellow {
-  background-color: #b59f3a !important;
-  border: none !important;
+.yellow{
+    background-color: #b59f3a !important;
+    border: none !important;
 }
-
-.green {
-  background-color: #538d4e !important;
-  border: none !important;
+.green{
+    background-color: #538d4e !important;
+    border: none !important;
 }
