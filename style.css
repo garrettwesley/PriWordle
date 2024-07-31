@@ -108,6 +108,12 @@ body {
     background-color: #818384;
     margin: 4px;
     font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    text-align: center;
+    line-height: 1;
 }
 
 /* First row: 10 keys */
