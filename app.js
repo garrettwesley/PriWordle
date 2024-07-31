@@ -1,7 +1,7 @@
 const tileDisplay = document.querySelector('.tile-container');
 const keyBoard = document.querySelector('.key-container');
 const messageDisplay = document.querySelector('.message-container');
-const wordle = "GRASS"
+const wordle = "EARTH"
 let currentRow = 0
 let currentTile = 0
 let isGameOver = false
@@ -90,7 +90,7 @@ const checkRow = () => {
         // showMessage(`Loading...`)
                 if (guess == wordle) {
                     flipTile()
-                    showMessage('Come meet Finn and I at the Presidio grass!')
+                    showMessage('Next clue is at Earth Bar!')
                     isGameOver = true
                     return
 
@@ -98,7 +98,7 @@ const checkRow = () => {
                 else {
                     flipTile()
                     if (wordle == guess) {
-                        showMessage('Come meet Finn and I at the Presidio grass!')
+                        showMessage('Next clue is at Earth Bar!')
                         isGameOver = true
                         return
                     } else {
