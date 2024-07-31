@@ -92,7 +92,6 @@ body {
     padding: 10px;
     box-sizing: border-box;
 }
-
 .key-container {
     width: 100%;
     max-width: 510px;
@@ -116,14 +115,14 @@ body {
     flex-basis: calc(10% - 8px);
 }
 
-/* Second row: 9 keys, centered */
+/* Second row: 9 keys */
 .key-container button:nth-child(n+11):nth-child(-n+19) {
     flex-basis: calc(11.11% - 8px);
 }
 
-/* Third row: 7 keys */
+/* Third row: 9 keys */
 .key-container button:nth-child(n+20) {
-    flex-basis: calc(14.28% - 8px);
+    flex-basis: calc(11.11% - 8px);
 }
 
 /* Wider keys for Enter and Backspace */
