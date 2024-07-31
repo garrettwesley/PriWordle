@@ -145,11 +145,7 @@ const flipTile = () => {
         if (guess.letter == wordle[index]) {
             guess.color = 'green'
             checkWordle = checkWordle.replace(guess.letter, '')
-        }
-    })
-
-    guess.forEach(guess => {
-        if (checkWordle.includes(guess.letter)) {
+        } else if (checkWordle.includes(guess.letter)) {
             guess.color = 'yellow'
             checkWordle = checkWordle.replace(guess.letter, '')
         }
